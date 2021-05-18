@@ -68,7 +68,7 @@ unsigned int UNIT_HANDLER::add (float frequency, void (*fun)(unsigned int), bool
 
     this->listPointer->id = this->counter;
     this->listPointer->sampleTime = (unsigned int) (1.0/frequency*1000*1000);
-    // cout << "[Addedd process with sampletime: " << this->listPointer->sampleTime << endl;
+    
     this->listPointer->lastTime = 0;
     this->listPointer->paused = paused;
     this->listPointer->fun_ptr = fun;
@@ -82,9 +82,8 @@ void UNIT_HANDLER::_check ( ) {
     unsigned int currentTime = micros( );
     unsigned int elapsedTime;
     unitNode *current = this->unitList;
-    //cout << "[check] elapsed time: " << elapsedTime << endl;
+    
     do {
-        //cout << "[id:" << current->id << "] sample time: " << current->sampleTime << endl;
         if (!current->paused) {
             elapsedTime = currentTime - current->lastTime;
             if (elapsedTime > current->sampleTime) {

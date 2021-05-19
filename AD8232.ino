@@ -32,7 +32,7 @@ float b[] = {
     0.624447671548746
   };
 
-RT_IIR<float> iir = RT_IIR<float>(7, 7, b, a);
+RT_IIR<float> iir = RT_IIR<float>(5, 5, b, a);
 UNIT_HANDLER *unitHandler;
 
 void setup( ) {

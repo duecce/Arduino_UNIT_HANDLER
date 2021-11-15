@@ -10,7 +10,7 @@ unitHandler = UNIT_HANDLER::getInstance( );
 ...
 ```
 Now unitHandler is an instance to the Arduino_UNIT_HANDLER class. You can get the same instance in every part of the code with no risk to overwrite or change the object. 
-After that, you can connect a function to unitHandler and sey to it: 'execute it every 10ms, or 1s, or another sample time'. 
+After that, you can connect a function to unitHandler and say to it: 'execute it every 10ms, or 1s, or another sample time'. 
 ```
 // Connect printRawECG to unitHandler and execute it every 1/100 seconds
 unitHandler->add(ECG_FS, printRawECG);  

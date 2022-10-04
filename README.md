@@ -1,5 +1,5 @@
 # Arduino_UNIT_HANDLER
-Unit Handler is a library that could help you to set a frequency for analog to digital converter processing. You can handle more than one function and implement them separatly.
+Unit Handler is a library that could help you to set a frequency for analog to digital converter processing, it implements the polling process. You can handle more than one function and implement them separatly.
 ## AD8232.ino 
 This file is an example that use Unit_Handler and RealTime_IIR library to do the analog to digital converting and a real-time filtering of the signal read from AD8232. AD8232 is a single-lead, heart rate monitor front-end.
 ## Usage example:
